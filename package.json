@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
     "next-auth": "^4.24.11"
   }
 }

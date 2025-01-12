@@ -1,33 +1,20 @@
-# from routes.auth_routes import auth_bp
-# from routes.streak_routes import streak_bp
-from BackEnd.models import payment_bp
-from flask import Flask
+from routes.streak_route import streak_bp
+from models import db  # Assuming db is initialized in models/__init__.py
 
-from models.user import db as user_db
-from models.streak import db as streak_db
+
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///accountability.db'  # or another DB engine
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///accountability.db'  # Update for your DB
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Replace with a secure key
 
-    # Initialize the shared db instance
-    user_db.init_app(app)
-    streak_db.init_app(app)
+    db.init_app(app)
+    jwt = JWTManager(app)
 
     with app.app_context():
-        # Create tables if they don't exist
-        user_db.create_all()
-        streak_db.create_all()
+        db.create_all()
 
-    # Register blueprints
-    # app.register_blueprint(auth_bp)
-    # app.register_blueprint(streak_bp)
-    app.register_blueprint(payment_bp)
+    app.register_blueprint(streak_bp, url_prefix='/api')
 
     return app
-
-
-if __name__ == '__main__':
-    app = create_app()
-    app.run(debug=True)
