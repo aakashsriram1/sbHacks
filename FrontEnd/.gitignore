@@ -1,0 +1,16 @@
+# Node.js-related files
+node_modules/
+.env
+*.log
+
+# Build folders
+.next/
+dist/
+out/
+
+# OS-specific files
+.DS_Store
+
+# Editor/IDE files
+.vscode/
+.idea/
