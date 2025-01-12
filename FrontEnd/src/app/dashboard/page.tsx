@@ -41,7 +41,8 @@ const Dashboard = () => {
   };
 
   const handleLogout = () => {
-    signOut({ callbackUrl: "/" });
+    document.cookie = 'next-auth.session-token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    signOut({ callbackUrl: '/' });
   };
 
   return (
