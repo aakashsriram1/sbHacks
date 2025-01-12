@@ -65,7 +65,7 @@ export const Pricing = () => {
     <section className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
-          <h2 className="section-title">Level Up</h2>
+          <h2 className="section-title">Level Up with Streaks</h2>
           <p className="section-des mt-5"></p>
         </div>
 

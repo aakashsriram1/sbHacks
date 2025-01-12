@@ -1,14 +1,12 @@
 "use client";
 import ArrowIcon from "@/assets/arrow-right.svg";
-import cogImage from "@/assets/cog.png";
-import cylinderImage from "@/assets/cylinder.png";
-import noodleImage from "@/assets/noodle.png";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import Image from "next/image";
+import fireImage from "@/assets/fire.png";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import React from "react";
 
 export const Hero = () => {
-  const heroRef = useRef(null);
+  const heroRef = useRef(null); // Reference for the hero section
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start end", "end start"],
@@ -16,11 +14,17 @@ export const Hero = () => {
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
+  const handleLearnMoreClick = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight, // Scrolls to the very bottom of the page
+      behavior: "smooth", // Smooth scrolling effect
+    });
+  };
+
   return (
     <section
       ref={heroRef}
       className="pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip bg-gradient-to-b from-[#D2DCFF] to-white"
-      // style={{ background: "radial-gradient(ellipse 200% 100% at bottom left, #183EC2, #EAEEFE 100%)" }}
     >
       <div className="container">
         <div className="md:flex items-center">
@@ -33,13 +37,15 @@ export const Hero = () => {
               and celebrate your wins.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Learn More</button>
+              <button className="btn btn-primary" onClick={handleLearnMoreClick}>
+                Learn More
+              </button>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
             <motion.img
-              src={cogImage.src}
-              alt="Cog"
+              src={fireImage.src}
+              alt="Fire"
               className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
               animate={{
                 translateY: [-30, 30],

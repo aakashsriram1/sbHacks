@@ -26,7 +26,7 @@ export const ProductShowcase = () => {
             A more interactive way to stay locked in
           </h2>
           <p className="section-des mt-5">
-            Make money while you do your tasks.
+            Money is on the line.
           </p>
         </div>
 

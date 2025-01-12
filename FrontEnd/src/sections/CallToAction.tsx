@@ -18,30 +18,11 @@ export const CallToAction = () => {
     <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
         <div className="section-heading relative">
-          <h2 className="section-title">Lock in NOW!</h2>
+          <h2 className="section-title">Lock in now with LockedIn AI.</h2>
           <p className="section-des mt-5">
-            Celebrate the joy of accomplishment with an app designed to track your progress and motivate your
-            efforts.
+            Utilize top-engineered AI capabilities to revolutionize your workflow. Sign 
+            up today and join countless others in their journey to success!
           </p>
-
-          <motion.img
-            src={starImage.src}
-            alt="star image"
-            width={360}
-            className="absolute -left-[350px] -top-[137px]"
-            style={{
-              translateY,
-            }}
-          />
-          <motion.img
-            src={springImage.src}
-            alt="spring image"
-            width={360}
-            className="absolute -right-[331px] -top-[19px]"
-            style={{
-              translateY,
-            }}
-          />
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">

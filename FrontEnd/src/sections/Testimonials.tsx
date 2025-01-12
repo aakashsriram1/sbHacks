@@ -15,55 +15,55 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+    text: "As a working mom, this app has been a lifesaver. Its helped me keep track of busy motherhood.",
     imageSrc: avatar1.src,
     name: "Jamie Rivera",
     username: "@jamietechguru00",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Our team's productivity has skyrocketed since we integrated LockedIn!",
     imageSrc: avatar2.src,
     name: "Josh Smith",
     username: "@jjsmith",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
+    text: "LockedIn AI has completely transformed how I manage my life.",
     imageSrc: avatar3.src,
     name: "Morgan Lee",
     username: "@morganleewhiz",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    text: "I was amazed at how quickly my life changed from being LockedIn.",
     imageSrc: avatar4.src,
     name: "Casey Jordan",
     username: "@caseyj",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+    text: "Planning and executing tasks has never been easier. Thank you, LockedIn AI!",
     imageSrc: avatar5.src,
     name: "Taylor Kim",
     username: "@taylorkimm",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
+    text: "The task capabilities of LockedIn are top-notch.",
     imageSrc: avatar6.src,
     name: "Riley Smith",
     username: "@rileysmith1",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+    text: "Adopting LockedIn AI for our team has streamlined our project management entirely.",
     imageSrc: avatar7.src,
     name: "Jordan Patels",
     username: "@jpatelsdesign",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    text: "With LockedIn, we can easily assign tasks and track progress all in a fun way!",
     imageSrc: avatar8.src,
     name: "Sam Dawson",
     username: "@dawsontechtips",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
+    text: "Its user-friendly interface and robust features support my diverse needs.",
     imageSrc: avatar9.src,
     name: "Casey Harper",
     username: "@casey09",
@@ -131,7 +131,7 @@ export const Testimonials = () => {
             <div className="tag">Testimonials</div>
           </div>
 
-          <h2 className="section-title mt-5">Bums that need accountability</h2>
+          <h2 className="section-title mt-5">Messages from our happy users</h2>
           <p className="section-des mt-5">
 
           </p>
