@@ -2,14 +2,19 @@
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import MasterProg from "@/assets/master_prog.png";
+import IntermediateProg from "@/assets/intermediate_prog.png";
+import NoviceProg from "@/assets/novice_prog.jpg";
+import Image from "next/image";
+import { Ms_Madi } from "next/font/google";
 
 const pricingTiers = [
   {
-    title: "Free",
-    monthlyPrice: 0,
-    buttonText: "Get started for free",
+    title: "Novice",
+    daysAmount: 5,
     popular: false,
     inverse: false,
+    image: NoviceProg,
     features: [
       "Up to 5 project members",
       "Unlimited tasks and projects",
@@ -19,11 +24,11 @@ const pricingTiers = [
     ],
   },
   {
-    title: "Pro",
-    monthlyPrice: 9,
-    buttonText: "Sign up now",
-    popular: true,
-    inverse: true,
+    title: "Intermediate",
+    daysAmount: 15,
+    popular: false,
+    inverse: false,
+    image: IntermediateProg,
     features: [
       "Up to 50 project members",
       "Unlimited tasks and projects",
@@ -35,11 +40,11 @@ const pricingTiers = [
     ],
   },
   {
-    title: "Business",
-    monthlyPrice: 19,
-    buttonText: "Sign up now",
+    title: "Expert",
+    daysAmount: 30,
     popular: false,
     inverse: false,
+    image: MasterProg,
     features: [
       "Up to 5 project members",
       "Unlimited tasks and projects",
@@ -61,60 +66,34 @@ export const Pricing = () => {
       <div className="container">
         <div className="section-heading">
           <h2 className="section-title">Level Up</h2>
-          <p className="section-des mt-5">
-
-          </p>
+          <p className="section-des mt-5"></p>
         </div>
 
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
-          {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, features, inverse }) => (
+          {pricingTiers.map(({ title, daysAmount, image }) => (
             <div
               key={title}
-              className={twMerge(
-                "p-10 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full",
-                inverse === true && "border-black bg-black text-white"
-              )}
+              className="p-10 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full"
             >
+              {/* Title */}
               <div className="flex justify-between">
-                <h3 className={twMerge("text-lg font-bold text-black/50", inverse && "text-white/60")}>
-                  {title}
-                </h3>
-                {popular && (
-                  <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                    <motion.span
-                      animate={{
-                        backgroundPositionX: "-100%",
-                      }}
-                      transition={{
-                        duration: 1,
-                        repeat: Infinity,
-                        ease: "linear",
-                        repeatType: "loop",
-                      }}
-                      className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
-                    >
-                      Popular
-                    </motion.span>
-                  </div>
-                )}
+                <h3 className="text-lg font-bold text-black/50">{title}</h3>
               </div>
+
+              {/* Number of Days */}
               <div className="flex items-baseline gap-1 mt-[30px]">
-                <span className="text-4xl font-bold tracking-tighter leading-none">${monthlyPrice}</span>
-                <span className="tracking-tight font-bold text-black/50">/month</span>
+                <span className="text-4xl font-bold tracking-tighter leading-none">{daysAmount}</span>
+                <span className="tracking-tight font-bold text-black/50"> days</span>
               </div>
-              <button
-                className={twMerge("btn btn-primary w-full mt-[30px]", inverse && "bg-white text-black")}
-              >
-                {buttonText}
-              </button>
-              <ul className="flex flex-col gap-5 mt-8">
-                {features.map((feature) => (
-                  <li key={feature} className="text-sm flex items-center gap-4">
-                    <CheckIcon className="h-6 w-6" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Box-Specific Image */}
+              <div className="flex justify-center mt-6">
+                <Image
+                  src={image}
+                  alt={`${title} icon`}
+                  className="h-24 w-24"
+                />
+              </div>
             </div>
           ))}
         </div>

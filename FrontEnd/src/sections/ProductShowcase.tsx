@@ -1,5 +1,5 @@
 "use client";
-import productImage from "@/assets/product-image.png";
+import productImage from "@/assets/showcase.png";
 import pyramidImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
 import Image from "next/image";
@@ -26,32 +26,12 @@ export const ProductShowcase = () => {
             A more interactive way to stay locked in
           </h2>
           <p className="section-des mt-5">
-            Make Money while you do your tasks
+            Make money while you do your tasks.
           </p>
         </div>
 
         <div className="relative">
           <Image src={productImage} alt="Product image" className="mt-10" />
-          <motion.img
-            src={pyramidImage.src}
-            alt="Pyramid image"
-            height={262}
-            width={262}
-            className="hidden md:block absolute -right-36 -top-32"
-            style={{
-              translateY: translateY,
-            }}
-          />
-          <motion.img
-            src={tubeImage.src}
-            alt="Tube image"
-            height={248}
-            width={248}
-            className="hidden md:block absolute bottom-24 -left-36"
-            style={{
-              translateY: translateY,
-            }}
-          />
         </div>
       </div>
     </section>

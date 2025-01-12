@@ -17,7 +17,7 @@ export const Footer = () => {
 
         <div className="flex justify-center gap-6 mt-6">
         </div>
-        <p className="mt-6">&copy; 2024 LockedIN Ai, Inc. All rights reserved.</p>
+        <p className="mt-6">&copy; 2025 LockedIn AI, Inc. All rights reserved.</p>
       </div>
     </footer>
   );

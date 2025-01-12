@@ -14,14 +14,10 @@ export const Header = () => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
-        <p className="text-white/60 hidden md:block">Streamline your workflow and boost your productivity</p>
-        <div className="inline-flex gap-1 items-center">
-          <p>Get started for free</p>
-          <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
-        </div>
+        <p className="text-white/60 hidden md:block">Get productive, stay productive.</p>
       </div>
 
-      <div className="py-5">
+      <div className="py-5 bg-[#D2DCFF]">  {/* Added bg-[#D2DCFF] here */}
         <div className="container">
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="LockedIn logo" height={40} width={40} />
